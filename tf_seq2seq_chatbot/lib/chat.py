@@ -25,7 +25,7 @@ def chat():
 
     while sentence:
         predicted_sentence = get_predicted_sentence(sentence, vocab, rev_vocab, model, sess)
-        print(predicted_sentence)
-        print("> ")
+        print("<" + predicted_sentence.replace(" ", ""))
+        print "\n> ",
         sys.stdout.flush()
         sentence = sys.stdin.readline()
